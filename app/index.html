@@ -13,56 +13,15 @@
     <link rel="stylesheet" href="/bower_components/material-design-lite/material.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animate.css">
     <!-- Wide card with share menu button -->
 </head>
   <body ng-app="SirklerApp">
-
-
-
-
-    <div class="container" ng-view="">
-      <div ng-controller="DirectionController">
-        <div class="directions mdl-card mdl-shadow--2dp">
-            <form action="#">
-              <div class="mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="text" id="sample1">
-                <label class="mdl-textfield__label" for="sample1">Hvor er du?</label>
-              </div>
-              <div class="mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="text" id="sample1">
-                <label class="mdl-textfield__label" for="sample1">Hvor skal du?</label>
-              </div>
-            </form>
-          <div class="mdl-card__menu">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-              Kjør da
-            </a>
-          </div>
-        </div>
-      </div>
+    <div class="container" ng-view="" ng-animate="'slide'">
     </div>
-
     <div ng-controller="MapController">
       <ui-gmap-google-map control='map.control' center='map.center' zoom='map.zoom'></ui-gmap-google-map>
     </div>
-
-
-    <!--[if lt IE 7]>
-      <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-    <![endif]-->
-
-    <!--[if lt IE 9]>
-      <script src="bower_components/es5-shim/es5-shim.js"></script>
-      <script src="bower_components/json3/lib/json3.min.js"></script>
-    <![endif]-->
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src='//www.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
 
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
@@ -77,10 +36,8 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/vegvesen.js"></script>
         <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
 
         <!-- endbuild -->
-=======
     <!-- build:js scripts/plugins.js -->
     <script src="/bower_components/material-design-lite/material.min.js"></script>
     <!-- endbuild -->
@@ -91,14 +48,16 @@
 
     <!-- build:js scripts/modules.js -->
     <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
     <!-- endbuild -->
 
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/map.js"></script>
+    <script src="scripts/controllers/registration.js"></script>
     <script src="scripts/controllers/direction.js"></script>
     <!-- endbuild -->
->>>>>>> ff8707856e89683a519ea00760f58aaa4d7a0dce
 </body>
 </html>

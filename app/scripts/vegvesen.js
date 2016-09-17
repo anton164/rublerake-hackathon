@@ -1,7 +1,7 @@
 var vegvesenClient  = require("vegvesen");	//replace with require("vegvesen") in production
 var vegvesen = new vegvesenClient();			//create a new instance of vegvesenClient
 
-var kommune = 1201; //1201 == Bergen kommune
+var kommune = 217;
 var kommuneNavn;
 
 function findKommune(kommuner){
@@ -16,6 +16,7 @@ var searchObject = {
 var averageSpeed = 0;
 
 vegvesen.connect(function(){
+  console.log(vegvesen.definisjoner.vegobjektTyper);
     vegvesen.omrader.kommuner(function(obj){
        kommuneNavn = obj.kommuner.find(findKommune).navn;
         console.log("Fetching data for " + kommuneNavn + ", please wait...");
