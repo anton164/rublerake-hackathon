@@ -20,9 +20,19 @@ body {
     line-height: 1;
     letter-spacing: -1px;
 }
-.demo-card-wide.mdl-card {
-  width: 512px;
+
+.directions {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  min-height: auto;
+  padding: 0 25px;
 }
+
+.directions .mdl-textfield {
+  width: 250px;
+}
+
 .demo-card-wide > .mdl-card__title {
   color: #fff;
   height: 176px;
@@ -32,4 +42,6 @@ body {
   color: #fff;
 }
 
-.angular-google-map-container { height: 400px; }
+.angular-google-map-container {
+  height: 100vh;
+}

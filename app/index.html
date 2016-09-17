@@ -16,30 +16,37 @@
     <!-- Wide card with share menu button -->
 </head>
   <body ng-app="SirklerApp">
-    <div ng-controller="MapController">
-      <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
-    </div>
-    <h1>Rublerake</h1>
 
-    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
-      <div class="mdl-card__title">
-        <h2 class="mdl-card__title-text">Welcome</h2>
-      </div>
-      <div class="mdl-card__supporting-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Mauris sagittis pellentesque lacus eleifend lacinia...
-      </div>
-      <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-          Get Started
-        </a>
-      </div>
-      <div class="mdl-card__menu">
-        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-          <i class="material-icons">share</i>
-        </button>
+
+
+
+    <div class="container" ng-view="">
+      <div ng-controller="DirectionController">
+        <div class="directions mdl-card mdl-shadow--2dp">
+            <form action="#">
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" id="sample1">
+                <label class="mdl-textfield__label" for="sample1">Hvor er du?</label>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" id="sample1">
+                <label class="mdl-textfield__label" for="sample1">Hvor skal du?</label>
+              </div>
+            </form>
+          <div class="mdl-card__menu">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              Kjør da
+            </a>
+          </div>
+        </div>
       </div>
     </div>
+
+    <div ng-controller="MapController">
+      <ui-gmap-google-map control='map.control' center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+    </div>
+
+
     <!--[if lt IE 7]>
       <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
     <![endif]-->
@@ -48,9 +55,6 @@
       <script src="bower_components/es5-shim/es5-shim.js"></script>
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
-
-    <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -78,6 +82,7 @@
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/map.js"></script>
+    <script src="scripts/controllers/direction.js"></script>
     <!-- endbuild -->
 </body>
 </html>
