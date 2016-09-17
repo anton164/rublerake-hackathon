@@ -7,7 +7,6 @@ app.use(express.logger());
 
 app.configure(function(){
   app.set('views', __dirname + '/app');
-  //app.set('view engine', 'jade');
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(express.static(__dirname + '/app'));
