@@ -1,13 +1,8 @@
 const querystring = require('querystring');
 const fetch = require('node-fetch');
 const { getMapsKey } = require('../config');
-const mapsClient = require('@google/maps').createClient({
-  key: getMapsKey()
-});
-
 
 const DIRECTIONS_URL = "https://maps.googleapis.com/maps/api/directions/json";
-
 const DISTANCE_MATRIX_URL = "https://maps.googleapis.com/maps/api/distancematrix/json";
 
 const requestRoute = (mode, from, to) => {
@@ -32,6 +27,8 @@ const requestDrivingRoute = (from, to) => requestRoute("driving", from, to)
 const requestTransitRoute = (from, to) => requestRoute("transit", from, to)
 const requestWalkingRoute = (from, to) => requestRoute("walking", from, to)
 const requestBicyclingRoute = (from, to) => requestRoute("bicycling", from, to)
+
+
 
 module.exports = {
   requestDrivingRoute,
