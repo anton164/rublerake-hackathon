@@ -1,6 +1,6 @@
 body {
-    background: #fafafa;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: white;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
 }
 
@@ -31,6 +31,37 @@ body {
 
 .directions .mdl-textfield {
   width: 250px;
+}
+
+.logo {
+  border-radius: 50px;
+  width: 60px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  padding-top: 25px;
+  margin: 10px auto;
+}
+
+.registreringz {
+  background-color: white;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 150px;
+}
+
+.registreringz .mdl-card {
+  box-shadow: none;
+  margin: 0 auto;
+  padding: 25px;
+  margin-top: 50px;
+}
+.registreringz form {
+  margin-top: 30px;
 }
 
 .demo-card-wide > .mdl-card__title {
